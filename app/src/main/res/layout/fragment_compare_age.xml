@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- ===== Top Toolbar ===== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topToolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/backbacground"
+            android:elevation="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_settings"
+            android:tint="@color/background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age Comparison"
+            android:textSize="18sp"
+            android:textColor="@color/background"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ===== Names ===== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/homebg"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:hint="First Person Name"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Person Name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSecondName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Second Person Name"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/black"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tilFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSecondName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second Person Name"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ===== DOB Fields ===== -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFirstDOB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="First Person DOB"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/black"
+        app:endIconMode="custom"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconTint="@color/background"
+        app:boxBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/tilSecondName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFirstDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Person DOB"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSecondDOB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Second Person DOB"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/black"
+        app:endIconMode="custom"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxBackgroundColor="@color/white"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconTint="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/tilFirstDOB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSecondDOB"
+            android:hint="Second Person DOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ===== Buttons Row ===== -->
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tilSecondDOB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:text="Reset"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/background"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:text="Calculate"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/background"
+            app:cornerRadius="12dp"/>
+
+
+    </LinearLayout>
+
+    <!-- ===== Age Difference Card ===== -->
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ageDifferenceCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp" app:cardBackgroundColor="@color/white"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Mini Cards (Years, Months, Days) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="#FF7043"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/tvDiffYears"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="#4CAF50"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/tvDiffMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="#2196F3"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/tvDiffDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="22"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Labels below mini cards -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Years"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center"
+                    android:textColor="#555"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Months"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center"
+                    android:textColor="#555"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Days"
+                    android:gravity="center"
+                    android:textColor="#555"/>
+            </LinearLayout>
+
+            <!-- Age Comparison Text -->
+            <TextView
+                android:id="@+id/tvAgeComparison"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usman is 3 years 7 months and\n22 days older than Ali"
+                android:textSize="20sp"
+                android:fontFamily="@font/jaldi_regular"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

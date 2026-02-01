@@ -1,0 +1,361 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="46dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 1️⃣ Title -->
+        <TextView
+            android:id="@+id/tvYourAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Age Right Now"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/jaldi_regular"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+
+        <!-- 2️⃣ Mini Cards (Years, Months, Days numbers) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#FF7043"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvYearsNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="25"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#4CAF50"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvMonthsNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#2196F3"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvDaysNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="12"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- 3️⃣ Labels below mini cards -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Years"
+                android:layout_marginEnd="24dp"
+                android:textColor="#555"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Months"
+                android:layout_marginEnd="24dp"
+                android:textColor="#555"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Days"
+                android:textColor="#555"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- 4️⃣ Horizontal line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"/>
+
+
+        <!-- 6️⃣ Weeks, Days, Hours, Minutes, Seconds numbers -->
+        <!-- Age Details List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Months Old"
+                    android:layout_marginStart="8dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textMonthNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="380"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weeks Old"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textWeekNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1200"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#4CAF50"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Days Old"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textDayNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10500"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hours Old"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textHourNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="220000"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#9C27B0"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Minutes Old"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textMinuteNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15000000"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Seconds Old"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textSecondNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100124600"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#E91E63"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <!-- Buttons Row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnShare" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:text="Share"
+                android:textColor="@android:color/white"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    
+
+</com.google.android.material.card.MaterialCardView>

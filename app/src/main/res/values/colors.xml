@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#013B84</color>
+    <color name="screen_background">#F3F3F3</color>
+    <color name="primaryText">#212121</color>
+    <color name="card_age_now_bg">#FFCC80</color>
+    <color name="card_days_bg">#81D4FA</color>
+    <color name="card_birthday_bg">#A5D6A7</color>
+    <color name="card_horoscope_bg">#CE93D8</color>
+    <color name="card_born_day_bg">#FFD180</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="orange_500">#FFA500</color> <!-- Toolbar -->
+    <color name="orange_700">#FF8C00</color> <!-- Selected date circle -->
+    <color name="planet_mercury">#5C6BC0</color>
+    <color name="planet_venus">#EC407A</color>
+    <color name="planet_earth">#42A5F5</color>
+    <color name="planet_mars">#EF5350</color>
+    <color name="planet_jupiter">#FF7043</color>
+    <color name="planet_saturn">#AB47BC</color>
+    <color name="planet_uranus">#26C6DA</color>
+    <color name="planet_neptune">#3949AB</color>
+
+
+
+</resources>

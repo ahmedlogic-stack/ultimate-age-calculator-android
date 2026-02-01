@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- 🌌 Top Colored Header -->
+        <TextView
+            android:id="@+id/tvPlanetName"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/planet_mercury"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Mercury"
+
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 👤 Your Age Label -->
+
+        <!-- 📅 Days Label -->
+        <TextView
+            android:id="@+id/tvYourAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Your Age"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPlanetName" />
+
+        <!-- 🔢 Days Box -->
+
+        <!-- 📆 Years Label -->
+
+        <!-- 🔢 Years Box -->
+
+        <!-- 🪐 Planet Image on RIGHT -->
+
+        <TextView
+            android:id="@+id/tvDaysLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="In Days"
+            app:layout_constraintEnd_toStartOf="@+id/tvDaysValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvYourAge" />
+
+        <TextView
+            android:id="@+id/tvDaysValue"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_number_box"
+            android:gravity="center"
+            android:text="12345"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgPlanet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDaysLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvYourAge" />
+
+        <TextView
+            android:id="@+id/tvYearsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="In Years"
+            app:layout_constraintEnd_toStartOf="@+id/tvYearsValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDaysLabel" />
+
+        <TextView
+            android:id="@+id/tvYearsValue"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_number_box"
+            android:gravity="center"
+            android:text="24.5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgPlanet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvYearsLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvDaysValue" />
+
+        <ImageView
+            android:id="@+id/imgPlanet"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/mercury"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPlanetName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

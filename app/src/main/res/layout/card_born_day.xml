@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <!-- Born on -->
+        <TextView
+            android:id="@+id/tvBornOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Born on"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            android:fontFamily="@font/jaldi_regular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvBornDay"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Friday -->
+        <TextView
+            android:id="@+id/tvBornDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/jaldi_regular"
+            app:layout_constraintBottom_toBottomOf="@id/tvBornOn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvBornOn"
+            app:layout_constraintTop_toTopOf="@id/tvBornOn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

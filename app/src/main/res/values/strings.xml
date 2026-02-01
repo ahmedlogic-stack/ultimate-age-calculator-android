@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AGE Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calculate">Calculate</string>
+    <string name="age_calculator">Age Calculator</string>
+    <string name="history">History</string>
+    <string name="back">Back</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="todo">TODO</string>
+    <string name="settings" />
+    <string name="birthday_cake" />
+    <string name="share" />
+</resources>

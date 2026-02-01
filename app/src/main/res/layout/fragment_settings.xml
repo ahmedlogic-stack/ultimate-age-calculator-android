@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    tools:context=".SettingsFragment"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/backbacground"
+            android:elevation="8dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/age_calculator"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/righteous_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🌐 Language Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+
+        <TextView
+            android:id="@+id/optionLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="🌐 Language"
+            android:textSize="16sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 📅 Change Format Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFormat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardLanguage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/optionFormat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Change Date Format"
+            android:textSize="16sp"
+            android:padding="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 📤 Share App Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardFormat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/optionShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📤 Share this App"
+            android:textSize="16sp"
+            android:padding="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ⭐ Rate Us Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/optionRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⭐ Rate Us"
+            android:textSize="16sp"
+            android:padding="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 🔒 Privacy Policy Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPrivacy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/optionPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔒 Privacy Policy"
+            android:textSize="16sp"
+            android:padding="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 📜 Terms Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardPrivacy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/optionTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📜 Terms &amp; Conditions"
+            android:textSize="16sp"
+            android:padding="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
